@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo:5.0
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  app:
+    image: node:18.19.0-bullseye
+    working_dir: /workspace
+    command: npm run dev --workspace server
+    env_file:
+      - .env
+    environment:
+      MONGO_URI: mongodb://mongo:27017/docs_assistant
+      MONGO_DB: docs_assistant
+      PORT: "4000"
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/workspace
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-data:
