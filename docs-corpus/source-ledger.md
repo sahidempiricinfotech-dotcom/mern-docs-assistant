@@ -14,4 +14,3 @@ Checked: **2026-07-20 in Chrome**.
 | OWASP cheat sheets | no MERN version tag | Current security guidance only; never used to claim a library version |
 | Stack Overflow MongoDB `$in` answer | posted 2013; explicitly discusses MongoDB 2.4-era BSON limit | Historical context only; MongoDB 5.0 official “tens” guidance wins |
 | Stack Overflow react-testing-library tag | tag page checked 2026-07-20 | No answer with explicit React 18.2/test-library applicability was trusted; `version-unverified` |
-

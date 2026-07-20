@@ -33,4 +33,3 @@ Counted contradictions: **8**. IDs and file locations are stable audit keys.
 ## C08 React effect leaks an interval
 
 `client/src/components/LiveFeed.jsx:6-19` creates an interval without returning `clearInterval(timer)`. React 18 development StrictMode remounts effects, exposing duplicate polling; see [StrictMode effect replay](react/react-18.md#strictmode-effect-replay).
-

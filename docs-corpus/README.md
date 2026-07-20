@@ -32,4 +32,3 @@ The root lockfile only records workspace links. The workspace manifests and work
 - [Run audit and question-state ledger](run-audit.md)
 
 Every section states its applicable version and evidence. A source without sufficient version evidence is labelled `version-unverified` and cannot, by itself, support a High- or Medium-confidence answer.
-

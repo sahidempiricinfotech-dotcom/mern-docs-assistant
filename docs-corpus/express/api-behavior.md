@@ -23,4 +23,3 @@ Applicable version: **Express 4.18.2**.
 Verdict: use `express.json()`; a separate `body-parser` dependency is unnecessary for JSON. The versioned [Express 4 API](https://expressjs.com/en/4x/api.html#express.json) documents the built-in middleware. The repository already does this in `server/src/app.js`.
 
 Related: [CORS and streaming](../cross-stack/http-and-streaming.md).
-

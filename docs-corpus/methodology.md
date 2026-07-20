@@ -32,4 +32,3 @@ Low is below the acceptance bar. A Low row is not padded into an answer: it is m
 ## Run date
 
 Sources were checked in Chrome on 2026-07-20. Sheet writes use the deterministic answered date `2026-07-20`.
-

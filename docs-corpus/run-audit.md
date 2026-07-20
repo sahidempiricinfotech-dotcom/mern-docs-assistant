@@ -60,4 +60,3 @@ Repository contradictions: **8**, enumerated as C01-C08 in [code-audit.md](code-
 - Every corpus behavior section has a version claim backed by a versioned URL/tag/release, or is explicitly `version-unverified`.
 - Every corpus path cited in this ledger exists.
 - Counts in this file are the canonical counts for the Sheet and final Teams message.
-

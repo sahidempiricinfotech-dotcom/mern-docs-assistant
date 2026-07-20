@@ -39,4 +39,3 @@ Applicable version: **Node.js 18.19.x**.
 Verdict: use `stream.pipeline()` or `stream/promises.pipeline()` so backpressure and errors propagate across the pipeline. The [Node 18 stream documentation](https://nodejs.org/docs/latest-v18.x/api/stream.html) is a versioned 18.x URL; the repository pins 18.19.0, so APIs used must be checked against the exact 18.19 docs before implementation.
 
 Related: [MongoDB cursor streaming and CSV responses](../cross-stack/http-and-streaming.md#streaming-http-and-csv).
-
