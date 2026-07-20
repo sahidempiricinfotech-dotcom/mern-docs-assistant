@@ -20,6 +20,12 @@ Applicable version: **Node.js 18.19.0**.
 
 Verdict: CommonJS cannot synchronously `require()` an ESM-only package. Use `await import('package')` from CommonJS or choose a CommonJS-compatible package release. The exact [18.19 ESM documentation](https://nodejs.org/download/release/v18.19.0/docs/api/esm.html#import-expressions) states that dynamic `import()` works in CommonJS and can load ES modules.
 
+## Cryptographic session secrets
+
+Applicable version: **Node.js 18.19.0**.
+
+Verdict: generate unpredictable session-cookie secrets from a cryptographically secure source such as `crypto.randomBytes()` and inject them through the deployment secret store; do not ship a fallback literal. The exact [Node 18.19.0 `randomBytes` API](https://nodejs.org/download/release/v18.19.0/docs/api/crypto.html#cryptorandombytessize-callback) is the runtime evidence. How the Express session uses that secret is documented in [Signed sessions stored in MongoDB](../auth/authentication.md#signed-sessions-stored-in-mongodb).
+
 ## node:test
 
 Applicable version: **Node.js 18.19.0**.

@@ -4,7 +4,7 @@
 
 Applicable version: **MongoDB Node.js driver 5.9.2**.
 
-Verdict: migrate callbacks to Promises. The driver's [upgrade guide](https://www.mongodb.com/docs/drivers/node/current/reference/upgrade/) records callback removal as a version 5.0 breaking change; the repository's exact line is evidenced by the [v5.9.2 tag](https://github.com/mongodb/node-mongodb-native/tree/v5.9.2).
+Verdict: migrate callbacks to Promises. The driver's [upgrade guide](https://www.mongodb.com/docs/drivers/node/current/reference/upgrade/) records callback removal as a version 5.0 breaking change, and the official [v5.0.0 release notes](https://github.com/mongodb/node-mongodb-native/releases/tag/v5.0.0) state that the public API became Promise-only. The repository's exact installed line is evidenced by the [v5.9.2 tag](https://github.com/mongodb/node-mongodb-native/tree/v5.9.2).
 
 Code impact: [C06](../code-audit.md#c06-driver-5-call-uses-a-removed-callback-api).
 

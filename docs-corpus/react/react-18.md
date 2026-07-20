@@ -10,7 +10,7 @@ Verdict: not available in the pinned React release. The [React 19 release articl
 
 Applicable version: **React 18.2.0**.
 
-Verdict: Suspense is supported, but bare React 18 does not expose the current `use(Promise)` model. Prefer a React-18-compatible framework/data library with documented Suspense integration, or fetch in an effect and manage loading/error state. The current [Suspense reference](https://react.dev/reference/react/Suspense) describes framework-maintained Promise caches and `use`; because that page is current and includes later React APIs, it is evidence for the upgrade direction, not proof that `use` exists in 18.2. The pinned boundary is the [React 18.2.0 tag](https://github.com/facebook/react/tree/v18.2.0).
+Verdict: use Suspense data fetching through a React-18-compatible opinionated framework or data library with documented integration. The exact [React 18 release notes](https://react.dev/blog/2022/03/29/react-v18#suspense-in-data-frameworks) name Relay, Next.js, Hydrogen, and Remix, and say that ad hoc Suspense data fetching is technically possible but not recommended. For a plain effect-based request, manage loading and error state explicitly. The current [Suspense reference](https://react.dev/reference/react/Suspense) describes later framework-maintained caches and `use`; it is upgrade-direction evidence, not proof that those later APIs exist in the pinned [React 18.2.0 tag](https://github.com/facebook/react/tree/v18.2.0).
 
 Related: [Node 18 global fetch](../node/runtime-and-apis.md#global-fetch).
 

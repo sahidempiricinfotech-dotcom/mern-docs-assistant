@@ -36,4 +36,4 @@ Applicable versions: candidate `express-session` **1.17.3** and `connect-mongo` 
 
 Verdict: add explicit dependencies, configure `express-session` with an environment-backed secret, `resave: false`, `saveUninitialized: false`, and production cookie flags; use `connect-mongo` as the server-side store. The cookie holds only the session ID. Exact tag evidence: [express-session 1.17.3 README](https://github.com/expressjs/session/blob/v1.17.3/README.md) and [connect-mongo 5.1.0 README](https://github.com/jdesboeufs/connect-mongo/blob/v5.1.0/README.md), which states support for driver 5/6 and MongoDB 3.6+. Do not copy this configuration without first pinning those dependencies and adding CSRF/session lifecycle tests.
 
-Related: [Credentialed CORS](../cross-stack/http-and-streaming.md#credentialed-cors).
+Related: [Credentialed CORS](../cross-stack/http-and-streaming.md#credentialed-cors) and reciprocal Node-side [cryptographic session secret generation](../node/runtime-and-apis.md#cryptographic-session-secrets).
