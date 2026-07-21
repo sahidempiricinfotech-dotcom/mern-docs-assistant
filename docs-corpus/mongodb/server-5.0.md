@@ -10,7 +10,7 @@ Verdict: the `from` collection cannot be sharded. The versioned [MongoDB 5.0 `$l
 
 Applicable version: **MongoDB 5.0**.
 
-Verdict: `{ w: 'majority' }` is the implicit default for most replica sets and sharded clusters, but topology and a configured global default can change the result. The versioned [MongoDB 5.0 write concern reference](https://www.mongodb.com/docs/v5.0/reference/write-concern/#implicit-default-write-concern) is the governing source. Do not replace a deliberate application-level write concern with the word “default” without checking deployment topology and `setDefaultRWConcern`.
+Verdict: `{ w: 'majority' }` is the implicit default for most replica sets and sharded clusters, but topology and a configured global default can change the result. The versioned [MongoDB 5.0 write concern reference](https://www.mongodb.com/docs/v5.0/reference/write-concern/#implicit-default-write-concern) is the governing source. The repository's `docker-compose.yml` runs a standalone `mongo:5.0`; its ordinary acknowledged writes are effectively `w: 1`, so local behavior must not be described as replica-set majority durability. Do not replace a deliberate application-level write concern with the word “default” without checking deployment topology and `setDefaultRWConcern`.
 
 ## Time-series collections and retention
 
@@ -24,4 +24,4 @@ Applicable version: **MongoDB 5.0**.
 
 Verdict: there is no documented fixed element-count maximum. The versioned [MongoDB 5.0 `$in` page](https://www.mongodb.com/docs/v5.0/reference/operator/query/in/) recommends limiting parameters to **tens** because hundreds can hurt performance. The practical command is also bounded by BSON size, but that does not make huge arrays operationally safe.
 
-Stack Overflow check: the [accepted historical answer](https://stackoverflow.com/questions/5331549/what-is-the-maximum-number-of-parameters-passed-to-in-query-in-mongodb) was posted in 2013, has a high score, and bases its limit on MongoDB 2.4-era 16 MB BSON behavior. It is retained as historical context only. Official MongoDB 5.0 performance guidance wins; the old answer is not trusted for sizing a production query.
+Stack Overflow check: the [historical top answer](https://stackoverflow.com/questions/5331549/what-is-the-maximum-number-of-parameters-passed-to-in-query-in-mongodb) was posted 2013-08-28, had score 126 when checked 2026-07-21, and bases its calculation on MongoDB 2.4-era 16 MB BSON behavior. It is retained as historical context only. Official MongoDB 5.0 performance guidance wins; the old answer is not trusted for sizing a production query.

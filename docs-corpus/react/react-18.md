@@ -26,4 +26,4 @@ Code impact: `LiveFeed` creates an interval but returns no cleanup; see [C08](..
 
 Applicable version: **React 18.2.0**; testing recipe is **version-unverified**.
 
-The official React docs explain Suspense behavior but do not provide an end-to-end React Testing Library recipe for the repository's environment. The [Stack Overflow react-testing-library tag](https://stackoverflow.com/questions/tagged/react-testing-library) was checked on 2026-07-20, but no answer with an explicit React 18.2 and testing-library version contract was accepted as evidence. This remains Knowledge Gap G-001.
+The official React docs explain Suspense behavior but do not provide an end-to-end React Testing Library recipe for the repository's environment. A focused [Stack Overflow `react-testing-library` search](https://stackoverflow.com/search?q=%5Breact-testing-library%5D+React+18+Suspense) was checked on 2026-07-21; its three results did not provide an explicit React 18.2 and testing-library version contract for Suspense-boundary testing. No Stack Overflow answer was trusted. This remains Knowledge Gap G-001.

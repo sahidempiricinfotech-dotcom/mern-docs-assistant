@@ -36,6 +36,6 @@ Verdict: the test runner is usable but still labelled **Stability 1 – Experime
 
 Applicable version: **Node.js 18.19.x**.
 
-Verdict: use `stream.pipeline()` or `stream/promises.pipeline()` so backpressure and errors propagate across the pipeline. The [Node 18 stream documentation](https://nodejs.org/docs/latest-v18.x/api/stream.html) is a versioned 18.x URL; the repository pins 18.19.0, so APIs used must be checked against the exact 18.19 docs before implementation.
+Verdict: use `stream.pipeline()` or `stream/promises.pipeline()` so backpressure and errors propagate across the pipeline. The exact [Node 18.19.0 `stream.pipeline()` documentation](https://nodejs.org/download/release/v18.19.0/docs/api/stream.html#streampipelinesource-transforms-destination-callback) says the API forwards errors, cleans up the stream chain, and reports completion.
 
 Related: [MongoDB cursor streaming and CSV responses](../cross-stack/http-and-streaming.md#streaming-http-and-csv).

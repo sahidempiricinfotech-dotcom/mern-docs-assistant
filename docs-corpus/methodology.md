@@ -1,6 +1,6 @@
 # Deterministic method
 
-Applicable to: this corpus run over repository `main` and question dates 2026-06-15 through 2026-07-14 inclusive, using the Sheet timezone `Asia/Calcutta`.
+Applicable to: repository commit `e508acf871cc5b8c09d4928ddfd246c8ecaccc6e` on `main` and question dates 2026-06-15 through 2026-07-14 inclusive, using the Sheet timezone `Asia/Calcutta`.
 
 ## Version tagging
 
@@ -8,6 +8,7 @@ Applicable to: this corpus run over repository `main` and question dates 2026-06
 2. Tag a source with a version only when its URL is versioned, it is a Git tag, or a release/changelog states the introduction/removal version.
 3. If none of those exists, tag the source `version-unverified`.
 4. When versions disagree, retain both claims, put the pinned-version result first, and record the upgrade delta.
+5. Standards and security guidance that are not released with a MERN version are dated and labelled `not-versioned guidance`; they may support a security or web-platform recommendation but never establish a MERN version boundary.
 
 ## Routing
 
@@ -21,7 +22,7 @@ Normalize lowercase text, remove punctuation and filler, then consolidate only w
 
 - **High:** a versioned official page or exact Git tag directly states the decisive claim, and repository context does not add an unresolved choice.
 - **Medium:** versioned evidence directly supports the technical behavior, but the final operational choice depends on workload, threat model, or deployment details that are stated as assumptions.
-- **Low:** any decisive claim lacks direct version-applicable evidence, relies on a `version-unverified` source, conflicts with another authoritative source without a resolvable version boundary, or requires missing internal policy/test fixtures.
+- **Low:** any decisive MERN-version claim lacks direct version-applicable evidence, relies on a `version-unverified` source, conflicts with another authoritative source without a resolvable version boundary, or requires missing internal policy/test fixtures. Dated `not-versioned guidance` can support a security or web-platform recommendation only when no MERN version claim depends on it.
 
 Low is below the acceptance bar. A Low row is not padded into an answer: it is marked `gap` in Questions and upserted into Knowledge Gaps. High and Medium count as answered with confidence.
 
@@ -31,4 +32,4 @@ Low is below the acceptance bar. A Low row is not padded into an answer: it is m
 
 ## Run date
 
-Sources were checked in Chrome on 2026-07-20. Sheet writes use the deterministic answered date `2026-07-20`.
+Sources were checked in Chrome on 2026-07-21. Sheet writes use the completion date `2026-07-21`; verdicts, routing, version tags, duplicate keys, confidence states, and gap priority do not depend on the run date.
